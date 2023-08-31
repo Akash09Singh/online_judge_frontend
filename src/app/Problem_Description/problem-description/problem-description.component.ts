@@ -6,7 +6,7 @@ import { Problem } from 'src/app/models/Problem';
 import { Submit } from 'src/app/models/Submit';
 import { LoginService } from 'src/app/services/login_service/login.service';
 import { SubmitProblemService } from 'src/app/services/submit_service/submit-problem.service';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/src/sweetalert2.js';
 
 @Component({
   selector: 'app-problem-decription',

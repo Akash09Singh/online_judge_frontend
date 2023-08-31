@@ -6,7 +6,7 @@ import { LoginService } from 'src/app/services/login_service/login.service';
 import { ProblemsService } from 'src/app/services/problem_service/problems.service';
 import { SubmitContestService } from 'src/app/services/submit_service/submit-contest.service';
 import { SubmitProblemService } from 'src/app/services/submit_service/submit-problem.service';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/src/sweetalert2.js';
 
 @Component({
   selector: 'app-start-contest',

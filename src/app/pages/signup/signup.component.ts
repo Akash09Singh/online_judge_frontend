@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/User';
 import { RegisterService } from '../../services/User_service/register.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/src/sweetalert2.js';
 import { Router } from '@angular/router';
 import { delay } from 'rxjs/operators';
 @Component({

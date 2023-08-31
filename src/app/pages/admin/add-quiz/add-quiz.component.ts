@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ContestsService } from 'src/app/services/contest_service/contests.service';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/src/sweetalert2.js';
 
 @Component({
   selector: 'app-add-quiz',
