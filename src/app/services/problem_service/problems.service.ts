@@ -7,7 +7,7 @@ import baseUrl from '../User_service/helper';
   providedIn: 'root',
 })
 export class ProblemsService {
-  backEndUrl: string = 'http://localhost:8080/api/problems';
+  backEndUrl: string = 'http://13.232.115.69:8080/api/problems';
   constructor(private http: HttpClient) {}
 
   problems() {
@@ -21,19 +21,19 @@ export class ProblemsService {
     return this.http.post(this.backEndUrl + '/saveAll', contestQuestions);
   }
 
-  setContestFirstProblemId(problemId:any){
-    localStorage.setItem('contestFirstProblemId',problemId);
+  setContestFirstProblemId(problemId: any) {
+    localStorage.setItem('contestFirstProblemId', problemId);
   }
 
-  getContestFirstProblemId(){
+  getContestFirstProblemId() {
     return localStorage.getItem('contestFirstProblemId');
   }
 
-  setContestProblemCount(contestQuestionCount:any){
-    localStorage.setItem('contestQuestionCount',contestQuestionCount)
+  setContestProblemCount(contestQuestionCount: any) {
+    localStorage.setItem('contestQuestionCount', contestQuestionCount);
   }
 
-  getContestProblemCount(){
+  getContestProblemCount() {
     return localStorage.getItem('contestQuestionCount');
   }
 }

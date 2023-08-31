@@ -16,9 +16,14 @@ export class UserContestSubmissionsComponent implements OnInit {
   contests: any;
   ngOnInit(): void {
     this.user = this.loginService.getUserId();
-    this.submitContestservice.getUserContest(this.user).subscribe((data) => {
-      this.contests = data;
-      console.warn(data);
-    });
+    this.submitContestservice.getUserContest(this.user).subscribe(
+      (data) => {
+        this.contests = data;
+        console.warn(data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }

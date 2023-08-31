@@ -13,7 +13,7 @@ export class ContestComponent implements OnInit {
   /**
    *
    */
-  baseUrl: string = 'http://localhost:8080/api/contest';
+  baseUrl: string = 'http://13.232.115.69:8080/api/contest';
   contestData: Contest[] = [];
 
   constructor(

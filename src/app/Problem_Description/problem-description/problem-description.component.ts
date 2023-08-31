@@ -33,7 +33,7 @@ export class ProblemDecriptionComponent implements OnInit {
   }
 
   getProblemById(problemId: string | null): any {
-    let url = 'http://localhost:8080/api/problems/' + problemId;
+    let url = 'http://13.232.115.69:8080/api/problems/' + problemId;
     this.problemByIdService.fetchProblemById(url).subscribe(
       (data) => {
         this.problemDescription = data;

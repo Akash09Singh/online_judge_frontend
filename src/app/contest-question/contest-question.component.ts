@@ -12,7 +12,7 @@ export class ContestQuestionComponent implements OnInit {
   /**
    *
    */
-  baseUrl: string = 'http://localhost:8080/api/problems/contests/';
+  baseUrl: string = 'http://13.232.115.69:8080/api/problems/contests/';
   contestProblem: Problem[] = [];
   constructor(
     private problemService: ProblemsService,
