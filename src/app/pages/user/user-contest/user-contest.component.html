@@ -1,0 +1,28 @@
+<div class="container">
+  <mat-card>
+    <mat-list>
+      <div mat-subheader>All Contests</div>
+      <div class="row">
+        <div class="col-md-6" *ngFor="let contest of contestData">
+          <mat-card class="contest mt-15">
+            <mat-card-header>
+              <mat-card-title>
+                <a
+                  routerLink=""
+                  class="anchor-tag custom-icon-link"
+                  (click)="
+                    startContest(contest.title, contest.id, contest.endTime)
+                  "
+                  >{{ contest.title }}</a
+                >
+              </mat-card-title>
+            </mat-card-header>
+            <mat-list-item>
+              <div class="mt-20">Time: {{ contest.endTime }} Hrs</div>
+            </mat-list-item>
+          </mat-card>
+        </div>
+      </div>
+    </mat-list>
+  </mat-card>
+</div>

@@ -1,0 +1,29 @@
+.text-center {
+  text-align: center;
+}
+/* styles.css */
+.logo-header {
+  text-align: center; /* Center-align the logo */
+  padding: 20px;
+  background-color: #f5f5f5; /* Add a background color if desired */
+  /* Add a shadow for depth */
+}
+
+.logo-header img {
+  width: 80px;
+  height: 80px;
+  max-width: 200px; /* Set a maximum width for the logo */
+}
+.center-div {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.full-width {
+  width: 100%;
+}
+.signup-form {
+  margin-top: 10px;
+}

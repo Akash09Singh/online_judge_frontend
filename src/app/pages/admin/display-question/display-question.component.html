@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <h1>Questions</h1>
+
+      <mat-list>
+        <mat-card class="mt-15" *ngFor="let problem of contestProblem">
+          <mat-list-item class="h100"
+            ><mat-icon mat-list-icon>note</mat-icon>
+
+            <a class="anchor-tag" routerLink="problems/{{ problem.id }}">{{
+              problem.title
+            }}</a>
+          </mat-list-item>
+        </mat-card>
+      </mat-list>
+      <div class="container text-center">
+        <button mat-raised-button color="primary" routerLink="add-problem">
+          Add Question
+        </button>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <h2>Time</h2>
+      <button mat-raised-button color="primary">01:00:00 Hrs</button>
+    </div>
+  </div>
+</div>

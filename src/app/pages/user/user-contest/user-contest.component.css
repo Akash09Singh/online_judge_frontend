@@ -1,0 +1,12 @@
+.contest mat-list-item {
+  height: 100px;
+}
+.custom-icon-link {
+  display: inline-block;
+  padding-left: 55px; /* Add some space for the icon */
+  background: url("../../../../assets/RosetteBadgeAward.png") left center
+    no-repeat; /* Set the background image */
+  background-size: 45px 45px; /* Set the size of the image */
+  text-decoration: none; /* Remove underline from the link */
+  line-height: 45px; /* Match the line height to the image height */
+}

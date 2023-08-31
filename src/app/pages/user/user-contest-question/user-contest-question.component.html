@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <mat-list>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Questions</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+    <div [ngClass]="questionStatus()" class="w100" *ngFor="let problem of contestProblem">
+        <mat-list-item class="h100"
+            ><mat-icon mat-list-icon [ngClass]="questionTextStatus()">note</mat-icon>
+
+            <a [ngClass]="questionTextStatus()" class="anchor-tag " routerLink="problems/{{ problem.id }}">{{
+              problem.title
+            }}</a>
+          </mat-list-item>
+        
+    </div>
+  </mat-card>
+ </mat-list>   
+  </div>
+</div>

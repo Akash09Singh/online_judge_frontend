@@ -1,0 +1,40 @@
+<div class="container w100 mt-20" *ngIf="problemDescription">
+  <mat-card>
+    <h1>{{ problemDescription.title }}</h1>
+
+    <h2>{{ problemDescription.description }}</h2>
+  </mat-card>
+
+  <mat-card mat-raised-card class="mt-15">
+    <h3>Input : {{ problemDescription.example1input }}</h3>
+    <h3>Output : {{ problemDescription.example1output }}</h3>
+  </mat-card>
+  <mat-card class="mt-15">
+    <h3>Input : {{ problemDescription.example2input }}</h3>
+    <h3>Output : {{ problemDescription.example2output }}</h3>
+  </mat-card>
+  <div class="container">
+    <div class="row">
+     
+        <form (ngSubmit)="runCode()">
+          <mat-form-field class="w100 mt-15" appearance="outline">
+            <mat-label>Type your code here</mat-label>
+            <textarea
+              style="background-color: lightgoldenrodyellow"
+              type="text"
+              matInput
+              name="code"
+              color="primary"
+              rows="12"
+              name="code"
+              [(ngModel)]="submit.code"
+              ></textarea
+            >
+            <button mat-raised-button color="primary" type="submit">
+              Submit
+            </button>
+          </mat-form-field>
+        </form>     
+    </div>
+  </div>
+</div>

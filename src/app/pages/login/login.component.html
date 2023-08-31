@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="center-div">
+      <header class="logo-header">
+        <img src="../../../assets/OIP.jpg" alt="Logo" />
+        <h1 class="register-text">Login</h1>
+      </header>
+
+      <div class="signin-form">
+        <form (ngSubmit)="formSubmit()">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>User Name</mat-label>
+            <input
+              [(ngModel)]="logInData.username"
+              name="username"
+              required
+              matInput
+              placeholder="User Name"
+              name="username"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>password</mat-label>
+            <input
+              [(ngModel)]="logInData.password"
+              name="password"
+              type="password"
+              required
+              matInput
+              placeholder="password"
+            />
+          </mat-form-field>
+          <mat-card>
+            <div class="text-center">
+              <button
+                mat-raised-button
+                color="accent"
+                type="submit"
+                color="primary"
+              >
+                Login
+              </button>
+              <button mat-raised-button>Reset</button>
+            </div>
+          </mat-card>
+
+          <!-- Form fields and buttons -->
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

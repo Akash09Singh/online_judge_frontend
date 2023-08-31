@@ -1,0 +1,46 @@
+<mat-action-list>
+  <div mat-subheader>menu</div>
+  <mat-card class="mt-15">
+    <button mat-list-item routerLink="/admin">
+      <mat-icon mat-list-icon>home</mat-icon>
+      Home
+    </button>
+  </mat-card>
+  <mat-card class="mt-15">
+    <button mat-list-item routerLink="/admin/profile">
+      <mat-icon mat-list-icon>person</mat-icon>
+      Profile
+    </button>
+  </mat-card>
+
+  <mat-card class="mt-15">
+    <button mat-list-item routerLink="/admin/view-all-contest">
+      <mat-icon mat-list-icon>timer</mat-icon>
+      Contests
+    </button>
+  </mat-card>
+  <mat-card class="mt-15">
+    <button mat-list-item routerLink="/admin/add-contest">
+      <mat-icon mat-list-icon>library_add</mat-icon>
+      Add Contest
+    </button>
+  </mat-card>
+  <mat-card class="mt-15">
+    <button mat-list-item routerLink="/admin/view-all-problem">
+      <mat-icon mat-list-icon>code_blocks</mat-icon>
+      Problems
+    </button>
+  </mat-card>
+  <mat-card class="mt-15">
+    <button mat-list-item [routerLink]="['/admin/add-problem']">
+      <mat-icon mat-list-icon>note_add</mat-icon>
+      Add Problem
+    </button>
+  </mat-card>
+  <mat-card class="mt-15">
+    <button mat-list-item (click)="logOut()">
+      <mat-icon mat-list-icon>logout</mat-icon>
+      Logout
+    </button>
+  </mat-card>
+</mat-action-list>

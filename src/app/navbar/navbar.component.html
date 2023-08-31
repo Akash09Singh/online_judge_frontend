@@ -1,0 +1,53 @@
+<mat-toolbar color="primary">
+  <button
+    style="background-color: rgb(9, 67, 183)"
+    mat-icon-button
+    class="example-icon"
+  >
+    <mat-icon>menu_book</mat-icon>
+  </button>
+  <span>Code Machine</span>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon me-5 mr-40"
+    (click)="logOut()"
+    *ngIf="isLoggedIn"
+  >
+    LogOut
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon me-5 mr-40"
+    *ngIf="isLoggedIn"
+    routerLink="contests"
+  >
+    Contests
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon me-5 mr-40 ml-20"
+    *ngIf="isLoggedIn"
+    routerLink="problems"
+  >
+    problems
+  </button>
+
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon me-5"
+    *ngIf="!isLoggedIn"
+    routerLink="login"
+  >
+    Login
+  </button>
+
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon me-5"
+    *ngIf="!isLoggedIn"
+    routerLink="signup"
+  >
+    Register
+  </button>
+</mat-toolbar>

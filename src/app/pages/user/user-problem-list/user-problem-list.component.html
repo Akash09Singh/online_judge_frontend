@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-list>
+    <div mat-subheader>All Contests</div>
+    <mat-card class="contest mt-15" *ngFor="let problem of problemsList">
+      <mat-list-item>
+        <a
+          class="ml-20"
+          class="anchor-tag custom-icon-link"
+          [routerLink]="['/user/problems/' + problem.id]"
+          >{{ problem.title }}</a
+        >
+      </mat-list-item>
+    </mat-card>
+  </mat-list>
+</mat-card>

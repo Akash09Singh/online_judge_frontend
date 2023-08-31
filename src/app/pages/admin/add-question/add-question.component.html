@@ -1,0 +1,128 @@
+{{ contestQuestions | json }}
+<div class="container">
+  <h1>Add Questions</h1>
+  <div class="row">
+    <div *ngFor="let question of contestQuestions">
+      <mat-card>
+        <h2>Question {{ count }}</h2>
+        <form action="">
+          <mat-form-field class="w100">
+            <mat-label>Title</mat-label>
+            <input
+              type="input"
+              matInput
+              name="title"
+              color="accent"
+              placeholder="Question Title"
+              [(ngModel)]="question.title"
+            />
+          </mat-form-field>
+          <mat-form-field class="w100">
+            <mat-label>Description</mat-label>
+            <textarea
+              type="text"
+              matInput
+              name="description"
+              color="accent"
+              placeholder="Question Description"
+              rows="3"
+              [(ngModel)]="question.description"
+            ></textarea>
+          </mat-form-field>
+          <mat-form-field class="w23 ml-per-2">
+            <mat-label>Input 1</mat-label>
+            <input
+              type="input"
+              matInput
+              name="title"
+              color="accent"
+              placeholder="Input"
+              [(ngModel)]="question.example1input"
+            />
+          </mat-form-field>
+          <mat-form-field class="w23 ml-per-2">
+            <mat-label>Output 1</mat-label>
+            <input
+              type="input"
+              matInput
+              name="title"
+              color="accent"
+              placeholder="Expected Output"
+              [(ngModel)]="question.example1output"
+            />
+          </mat-form-field>
+          <mat-form-field class="w23 ml-per-2">
+            <mat-label>Input 2</mat-label>
+            <input
+              type="input"
+              matInput
+              name="title"
+              color="accent"
+              placeholder="input"
+              [(ngModel)]="question.example2input"
+            />
+          </mat-form-field>
+          <mat-form-field class="w23 ml-per-2">
+            <mat-label>Output 2</mat-label>
+            <input
+              type="input"
+              matInput
+              name="title"
+              color="accent"
+              placeholder="Expected Output"
+              [(ngModel)]="question.example2output"
+            />
+          </mat-form-field>
+          <mat-form-field class="w32" appearance="outline">
+            <mat-label>Boiler Code Python</mat-label>
+            <textarea
+              type="Code"
+              matInput
+              name="boiler_code_python"
+              color="accent"
+              rows="12"
+              [(ngModel)]="question.boiler_code_python"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="w32 ml-per-2" appearance="outline">
+            <mat-label>Boiler Code Java</mat-label>
+            <textarea
+              type="Code"
+              matInput
+              name="boiler_code_java"
+              color="accent"
+              rows="12"
+              [(ngModel)]="question.boiler_code_java"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="w32 ml-per-2" appearance="outline">
+            <mat-label>Boiler Code C++</mat-label>
+            <textarea
+              type="Code"
+              matInput
+              name="boiler_code_cpp"
+              color="accent"
+              rows="12"
+              [(ngModel)]="question.boiler_code_cpp"
+            ></textarea>
+          </mat-form-field>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+  <div class="container text-center h100 mt-20">
+    <button mat-raised-button color="accent" (click)="addQuestion()">
+      <mat-icon class="add-btn">add_circle</mat-icon>
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="formSubmit()"
+      class="ml-per-2"
+    >
+      Save Questions
+    </button>
+  </div>
+</div>

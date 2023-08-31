@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+  </head>
+
+  <body>
+    <div class="center-div">
+      <header class="logo-header">
+        <img src="../../../assets/OIP.jpg" alt="Logo" />
+        <h1 class="register-text">Register</h1>
+      </header>
+      <div class="signup-form">
+        <form (ngSubmit)="formSubmit()">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>User Name</mat-label>
+            <input
+              required
+              matInput
+              placeholder="User Name"
+              [(ngModel)]="newUser.username"
+              name="username"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>password</mat-label>
+            <input
+              type="password"
+              required
+              matInput
+              placeholder="password"
+              [(ngModel)]="newUser.password"
+              name="password"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>email</mat-label>
+            <input
+              required
+              matInput
+              placeholder="email"
+              [(ngModel)]="newUser.email"
+              name="email"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>first name</mat-label>
+            <input
+              required
+              matInput
+              placeholder="first name"
+              [(ngModel)]="newUser.firstName"
+              name="firstName"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>last name</mat-label>
+            <input
+              required
+              matInput
+              placeholder="last name"
+              [(ngModel)]="newUser.lastName"
+              name="lastName"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>phone</mat-label>
+            <input
+              required
+              matInput
+              placeholder="phone"
+              [(ngModel)]="newUser.phone"
+              name="phone"
+            />
+          </mat-form-field>
+          <mat-card>
+            <div class="text-center">
+              <button
+                mat-raised-button
+                color="accent"
+                type="submit"
+                color="primary"
+              >
+                Register
+              </button>
+              <button mat-raised-button>Reset</button>
+            </div>
+          </mat-card>
+          <!-- Form fields and buttons -->
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

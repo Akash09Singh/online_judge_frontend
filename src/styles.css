@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.tx-10 {
+  font-size: 10px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+.mr-40 {
+  margin-right: 40px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.ml-per-2 {
+  margin-left: 2%;
+}
+.ml-per-5 {
+  margin-left: 5%;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.profile-image {
+  max-width: 200px;
+  max-height: 200px;
+  border: 2px solid #ff4081;
+  border-radius: 50%;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid grey;
+}
+
+.table tr td {
+  padding: 20px 50px;
+  text-align: center;
+}
+.table tr {
+  border: 1px solid lightgrey;
+}
+
+.anchor-tag {
+  color: black;
+  text-decoration: none;
+}
+.w100 {
+  width: 100%;
+}
+.w23 {
+  width: 23%;
+}
+.w32 {
+  width: 32%;
+}
+
+.h100 {
+  height: 100px;
+}
+.welcome {
+  margin-top: 7%;
+  max-width: 25%;
+  max-height: 25%;
+}
+.welcome h1 {
+  margin-top: 60px;
+  font-size: 39px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

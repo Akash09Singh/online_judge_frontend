@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-3">
+      <mat-card>
+        <h1>Add new Contest</h1>
+        <form (ngSubmit)="formSubmit()">
+          <mat-form-field class="w100" type="text" color="accent">
+            <mat-label> Title</mat-label>
+            <input
+              [(ngModel)]="contestData.title"
+              type="text"
+              name="title"
+              matInput
+              placeholder="Add Contest Title"
+            />
+          </mat-form-field>
+          <mat-divider></mat-divider>
+          <mat-form-field class="w100" type="text" color="primary">
+            <mat-label> Add contest End Time</mat-label>
+            <input
+              [(ngModel)]="contestData.endTime"
+              type="text"
+              name="endTime"
+              matInput
+              placeholder="HH:MM:SS"
+            />
+          </mat-form-field>
+          <div class="container text-center">
+            <button mat-raised-button color="primary" type="submit">
+              Save Contest
+            </button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

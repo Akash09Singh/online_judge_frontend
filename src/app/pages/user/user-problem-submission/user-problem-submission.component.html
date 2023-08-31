@@ -1,0 +1,81 @@
+<div class="container">
+  <mat-card>
+    <table>
+      <mat-card style="height: 50px; max-width: 100%">
+        <tr class="mt-20">
+          <div class="row">
+            <div class="col-md-2">
+              <td>
+                <b><h1>S.No</h1></b>
+              </td>
+            </div>
+            <div class="col-md-5">
+              <td>
+                <b><h1>Problem Title</h1></b>
+              </td>
+            </div>
+            <div class="col-md-2">
+              <td>
+                <b><h1>Language</h1></b>
+              </td>
+            </div>
+            <div class="col-md-3">
+              <td>
+                <b><h1>Status</h1></b>
+              </td>
+            </div>
+          </div>
+        </tr>
+      </mat-card>
+      <mat-divider></mat-divider>
+      <div class="container">
+        <mat-card
+          style="height: 40px; max-width: 100%"
+          *ngFor="let submission of submissions; let i = index"
+        >
+          <tr class="mt-10">
+            <div class="row">
+              <div class="col-md-2">
+                <td>{{ i + 1 }}</td>
+              </div>
+
+              <div class="col-md-5">
+                <td>
+                  {{ submission.problemTitle }}
+                </td>
+              </div>
+              <div class="col-md-2">
+                <td>
+                  {{ submission.language }}
+                </td>
+              </div>
+              <div class="col-md-3" *ngIf="submission.status == 'Rejected'">
+                <td
+                  style="
+                    background-color: rgb(154, 14, 14);
+                    color: white;
+                    border-radius: 1rem;
+                  "
+                >
+                  {{ submission.status }}
+                </td>
+              </div>
+              <div class="col-md-3" *ngIf="submission.status == 'Accepted'">
+                <td
+                  style="
+                    background-color: rgb(42, 154, 14);
+                    color: white;
+                    border-radius: 1rem;
+                  "
+                >
+                  {{ submission.status }}
+                </td>
+              </div>
+            </div>
+          </tr>
+          <mat-divider></mat-divider>
+        </mat-card>
+      </div>
+    </table>
+  </mat-card>
+</div>

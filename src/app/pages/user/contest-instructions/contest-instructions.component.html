@@ -1,0 +1,56 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title> Read the Instructions of this page carefully</mat-card-title>
+                    <mat-card-subtitle> One more step to go</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <h2>contest</h2>
+                    <mat-divider></mat-divider>
+                    <br/>
+                    <h2>Important instructions</h2>
+                    <ul>
+                        <li>this contest is only for practice purpose</li>
+                        <li>this contest is of 90 minotes</li>
+                        <li>you have to submit the contest within20 minutes</li>
+                        <li>contest will automatically be submitted at the completion of 90 minutes if not manually submitted</li>
+                        <li>there are three questions in this contest</li>
+                        
+                        <li>all the questions are coding question</li>
+                    </ul>
+                    <mat-divider></mat-divider>
+                    <br/>
+                    <ul>
+                        <li>click on submit button to submit the problem</li>
+                        <li>select your coding language from the drop down on the right corner of each question</li>
+                        <li>allowed languages 
+                            <ul>
+                                <li>C++</li>
+                                <li>Java</li>
+                                <li>Python</li>
+                            </ul>
+                        </li>
+                        <li>click on end contest to submit assessment and end the contest</li>
+
+                        
+                        
+                        
+                    </ul>
+                    <mat-divider></mat-divider>
+                    <br/>
+                    <h2 class="text-center">Click start to start the contest</h2>
+
+                </mat-card-content>
+                
+            </mat-card>
+        </div>
+    </div>
+    <div class="container text-center mt-20">
+        <button mat-raised-button color="primary" [routerLink]="'/user/contest/'+contestId+'/problems/'+1">Start</button>
+    </div>
+    
+</div>

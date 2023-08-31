@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <button mat-raised-button color="primary" style="margin-top: 2px;">Time Left : {{formattedTime()}} Hrs</button>
+        <div class="col-md-3"><app-user-contest-question></app-user-contest-question></div>
+        <div class="col-md-7"><router-outlet></router-outlet></div>
+        <div class="col-md-2 text-center">
+            <button mat-raised-button 
+            style="color: white; background-color: red; " 
+            class="mt-20"
+            (click)="endContest()">End Test
+            </button>
+        </div>
+    </div>
+</div>

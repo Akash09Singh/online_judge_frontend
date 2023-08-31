@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let problem of contestProblem">
+    <a routerLink="problems/{{ problem.id }}">{{ problem.title }}</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>
