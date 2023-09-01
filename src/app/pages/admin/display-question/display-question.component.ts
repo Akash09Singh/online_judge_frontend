@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProblemsService } from '../../../services/problem_service/problems.service';
 import { ActivatedRoute } from '@angular/router';
 import { Problem } from '../../../models/Problem';
+import baseUrl from 'src/app/services/User_service/helper';
 
 @Component({
   selector: 'app-display-question',
@@ -9,7 +10,7 @@ import { Problem } from '../../../models/Problem';
   styleUrls: ['./display-question.component.css'],
 })
 export class DisplayQuestionComponent {
-  baseUrl: string = 'http://13.232.115.69:8080/api/problems/contests/';
+  baseUrl: string = baseUrl + 'problems/contests/';
   contestProblem: Problem[] = [];
   constructor(
     private problemService: ProblemsService,

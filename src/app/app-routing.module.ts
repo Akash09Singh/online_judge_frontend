@@ -23,11 +23,15 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
 import { UserContestComponent } from './pages/user/user-contest/user-contest.component';
 import { UserContestQuestionComponent } from './pages/user/user-contest-question/user-contest-question.component';
 import { UserProblemListComponent } from './pages/user/user-problem-list/user-problem-list.component';
-import{StartContestComponent} from './pages/user/start-contest/start-contest.component'
+import { StartContestComponent } from './pages/user/start-contest/start-contest.component';
 import { ContestInstructionsComponent } from './pages/user/contest-instructions/contest-instructions.component';
 import { UserResultComponent } from './pages/user/user-result/user-result.component';
 import { UserProblemSubmissionComponent } from './pages/user/user-problem-submission/user-problem-submission.component';
 import { UserContestSubmissionsComponent } from './pages/user/user-contest-submissions/user-contest-submissions.component';
+import { EditProblemComponent } from './pages/admin/edit-problem/edit-problem.component';
+import { EditContestComponent } from './pages/admin/edit-contest/edit-contest.component';
+import { ViewTestcaseComponent } from './pages/admin/view-testcase/view-testcase.component';
+import { AddTestcaseComponent } from './pages/admin/add-testcase/add-testcase.component';
 
 const routes: Routes = [
   { component: HomeComponent, path: '' },
@@ -65,6 +69,16 @@ const routes: Routes = [
       { component: DisplayQuestionComponent, path: 'contests/:contestId' },
       { component: ProblemDecriptionComponent, path: 'problems/:problemId' },
       {
+        component: ViewTestcaseComponent,
+        path: 'problems/testcase/:problemId',
+      },
+      {
+        component: AddTestcaseComponent,
+        path: 'problems/testcase/:problemId/add',
+      },
+      { component: EditProblemComponent, path: 'edit-problem/:problemId' },
+      { component: EditContestComponent, path: 'edit-contest/:contestId' },
+      {
         component: AddQuestionComponent,
         path: 'contests/:contestId/add-problem',
       },
@@ -91,22 +105,21 @@ const routes: Routes = [
         component: UserContestComponent,
         path: 'view-all-contest',
       },
-      {component:UserContestSubmissionsComponent, path:'my-contest'},
-      {component:UserProblemSubmissionComponent, path:'my-submissions'},
+      { component: UserContestSubmissionsComponent, path: 'my-contest' },
+      { component: UserProblemSubmissionComponent, path: 'my-submissions' },
       { component: UserProblemListComponent, path: 'view-all-problem' },
       { component: ProblemDecriptionComponent, path: 'problems/:problemId' },
-      {component: UserResultComponent, path:'contest/:contestId/result'}
-      
+      { component: UserResultComponent, path: 'contest/:contestId/result' },
     ],
   },
-  { component: StartContestComponent,
+  {
+    component: StartContestComponent,
     path: 'user/contest/:contestId',
-    canActivate:[userGuard],
-    children:[
-      {component:ContestInstructionsComponent, path: ''},
-      {component:ProblemDecriptionComponent, path:'problems/:problemId'},
-
-    ]
+    canActivate: [userGuard],
+    children: [
+      { component: ContestInstructionsComponent, path: '' },
+      { component: ProblemDecriptionComponent, path: 'problems/:problemId' },
+    ],
   },
 
   {

@@ -3,15 +3,36 @@
     <div mat-subheader>All Contests</div>
     <mat-card class="contest mt-15" *ngFor="let contest of contestData">
       <mat-list-item>
-        <mat-icon mat-list-icon>timer</mat-icon>
+        <div class="row">
+          <div class="col-md-9">
+            <mat-icon mat-list-icon>timer</mat-icon>
 
-        <a
-          class="anchor-tag"
-          [routerLink]="['/admin/contests/' + contest.id]"
-          >{{ contest.title }}</a
-        >
+            <a
+              class="anchor-tag"
+              [routerLink]="['/admin/contests/' + contest.id]"
+              >{{ contest.title }}</a
+            >
 
-        <div class="mt-20">Time: {{ contest.endTime }} Hrs</div>
+            <div class="mt-20">Time: {{ contest.endTime }} Hrs</div>
+          </div>
+          <div class="col-md-3">
+            <button
+              mat-raised-button
+              color="accent"
+              style="margin-right: 4px"
+              [routerLink]="['/admin/edit-contest/' + contest.id]"
+            >
+              Edit
+            </button>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="deleteContest(contest.id)"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
       </mat-list-item>
     </mat-card>
   </mat-list>

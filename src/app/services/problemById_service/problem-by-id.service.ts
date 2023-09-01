@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Problem } from '../../models/Problem';
+import baseUrl from '../User_service/helper';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { Problem } from '../../models/Problem';
 export class ProblemByIdService {
   constructor(private http: HttpClient) {}
 
-  fetchProblemById(url: string) {
-    return this.http.get<Problem>(url);
+  fetchProblemById(problemId: any) {
+    return this.http.get<Problem>(baseUrl + 'problems/' + problemId);
   }
 }

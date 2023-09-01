@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProblemsService } from '../services/problem_service/problems.service';
 import { ActivatedRoute } from '@angular/router';
 import { Problem } from '../models/Problem';
+import baseUrl from '../services/User_service/helper';
 
 @Component({
   selector: 'app-contest-question',
@@ -12,7 +13,7 @@ export class ContestQuestionComponent implements OnInit {
   /**
    *
    */
-  baseUrl: string = 'http://13.232.115.69:8080/api/problems/contests/';
+  baseUrl: string = baseUrl + 'problems/contests/';
   contestProblem: Problem[] = [];
   constructor(
     private problemService: ProblemsService,

@@ -1,9 +1,8 @@
 <div class="container">
-  <h1>Add Questions</h1>
   <div class="row">
-    <div *ngFor="let question of contestQuestions; let i = index">
+    <div>
       <mat-card>
-        <h2>Question {{ i + 1 }}</h2>
+        <h2>Edit Problem</h2>
         <form action="">
           <mat-form-field class="w100">
             <mat-label>Title</mat-label>
@@ -33,7 +32,7 @@
             <input
               type="input"
               matInput
-              name="title"
+              name="example1input"
               color="accent"
               placeholder="Input"
               [(ngModel)]="question.example1input"
@@ -44,7 +43,7 @@
             <input
               type="input"
               matInput
-              name="title"
+              name="example1output"
               color="accent"
               placeholder="Expected Output"
               [(ngModel)]="question.example1output"
@@ -55,7 +54,7 @@
             <input
               type="input"
               matInput
-              name="title"
+              name="example2input"
               color="accent"
               placeholder="input"
               [(ngModel)]="question.example2input"
@@ -66,7 +65,7 @@
             <input
               type="input"
               matInput
-              name="title"
+              name="example2output"
               color="accent"
               placeholder="Expected Output"
               [(ngModel)]="question.example2output"
@@ -112,9 +111,6 @@
     </div>
   </div>
   <div class="container text-center h100 mt-20">
-    <button mat-raised-button color="accent" (click)="addQuestion()">
-      <mat-icon class="add-btn">add_circle</mat-icon>
-    </button>
     <button
       mat-raised-button
       color="primary"

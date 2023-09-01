@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Add testcases for problem {{ problemId }}</h1>
+  <div class="row">
+    <div *ngFor="let tc of testcases; let i = index">
+      <mat-card>
+        <h2>Testcase {{ i + 1 }}</h2>
+        <form action="">
+          <mat-form-field class="w58">
+            <mat-label>Input</mat-label>
+            <input
+              type="input"
+              matInput
+              name="Input"
+              color="accent"
+              placeholder="a\nb\nc\nd\n"
+              [(ngModel)]="tc.input"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="w40 ml-per-2">
+            <mat-label>Output</mat-label>
+            <input
+              type="input"
+              matInput
+              name="expectedOutput"
+              color="accent"
+              placeholder="output"
+              [(ngModel)]="tc.expectedOutput"
+            />
+          </mat-form-field>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+  <div class="container text-center h100 mt-20">
+    <button mat-raised-button color="accent" (click)="addTestcase()">
+      <mat-icon class="add-btn">add_circle</mat-icon>
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="saveAllTestcase()"
+      class="ml-per-2"
+    >
+      Save Testcases
+    </button>
+  </div>
+</div>

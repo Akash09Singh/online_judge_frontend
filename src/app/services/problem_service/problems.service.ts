@@ -7,7 +7,7 @@ import baseUrl from '../User_service/helper';
   providedIn: 'root',
 })
 export class ProblemsService {
-  backEndUrl: string = 'http://13.232.115.69:8080/api/problems';
+  backEndUrl: string = baseUrl + 'problems';
   constructor(private http: HttpClient) {}
 
   problems() {
@@ -19,6 +19,14 @@ export class ProblemsService {
   saveAllProblem(contestQuestions: Problem[]) {
     console.log('problem service save all problem method is being called');
     return this.http.post(this.backEndUrl + '/saveAll', contestQuestions);
+  }
+
+  deleteProblem(problemId: any) {
+    return this.http.delete(this.backEndUrl + '/' + problemId);
+  }
+
+  editProblem(problemId: any, problemData: any) {
+    return this.http.put(this.backEndUrl + '/' + problemId, problemData);
   }
 
   setContestFirstProblemId(problemId: any) {

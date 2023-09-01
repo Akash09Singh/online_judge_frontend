@@ -3,13 +3,33 @@
     <div mat-subheader>All Contests</div>
     <mat-card class="contest mt-15" *ngFor="let problem of problemsList">
       <mat-list-item>
-        <mat-icon mat-list-icon>code_block</mat-icon>
-
-        <a
-          class="anchor-tag"
-          [routerLink]="['/admin/problems/' + problem.id]"
-          >{{ problem.title }}</a
-        >
+        <div class="row">
+          <div class="col-md-9">
+            <mat-icon mat-list-icon>code_block</mat-icon>
+            <a
+              class="anchor-tag"
+              [routerLink]="['/admin/problems/testcase/' + problem.id]"
+              >{{ problem.title }}</a
+            >
+          </div>
+          <div class="col-md-3">
+            <button
+              mat-raised-button
+              color="accent"
+              style="margin-right: 4px"
+              [routerLink]="['/admin/edit-problem/' + problem.id]"
+            >
+              Edit
+            </button>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="deleteProblem(problem.id)"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
       </mat-list-item>
     </mat-card>
   </mat-list>

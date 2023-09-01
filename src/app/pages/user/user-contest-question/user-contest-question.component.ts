@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Problem } from '../../../models/Problem';
 import { ContestsService } from 'src/app/services/contest_service/contests.service';
 import { SubmitProblemService } from 'src/app/services/submit_service/submit-problem.service';
+import baseUrl from 'src/app/services/User_service/helper';
 
 @Component({
   selector: 'app-user-contest-question',
@@ -11,7 +12,7 @@ import { SubmitProblemService } from 'src/app/services/submit_service/submit-pro
   styleUrls: ['./user-contest-question.component.css'],
 })
 export class UserContestQuestionComponent {
-  baseUrl: string = 'http://13.232.115.69:8080/api/problems/contests/';
+  baseUrl: string = baseUrl + 'problems/contests/';
   contestProblem: Problem[] = [];
   contestDetail: any;
   acceptedQuestion: any;

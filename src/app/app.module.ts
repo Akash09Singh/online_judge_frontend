@@ -46,6 +46,10 @@ import { UserResultComponent } from './pages/user/user-result/user-result.compon
 import { UserProblemSubmissionComponent } from './pages/user/user-problem-submission/user-problem-submission.component';
 import { UserContestSubmissionsComponent } from './pages/user/user-contest-submissions/user-contest-submissions.component';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+import { EditProblemComponent } from './pages/admin/edit-problem/edit-problem.component';
+import { EditContestComponent } from './pages/admin/edit-contest/edit-contest.component';
+import { ViewTestcaseComponent } from './pages/admin/view-testcase/view-testcase.component';
+import { AddTestcaseComponent } from './pages/admin/add-testcase/add-testcase.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +80,10 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
     UserResultComponent,
     UserProblemSubmissionComponent,
     UserContestSubmissionsComponent,
+    EditProblemComponent,
+    EditContestComponent,
+    ViewTestcaseComponent,
+    AddTestcaseComponent,
   ],
   imports: [
     BrowserModule,

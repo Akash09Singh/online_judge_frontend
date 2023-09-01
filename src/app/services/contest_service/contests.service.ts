@@ -12,28 +12,34 @@ export class ContestsService {
   fetchAllContest(url: string) {
     return this.http.get<Contest[]>(url);
   }
- 
 
   createContest(contestData: any) {
     return this.http.post(baseUrl + 'contest', contestData);
   }
 
-  getContestById(contestId:any){
-    return this.http.get(baseUrl+'contest/'+contestId);
+  getContestById(contestId: any) {
+    return this.http.get(baseUrl + 'contest/' + contestId);
   }
-  setContestName(contestName:string){
-    localStorage.setItem('contestName', contestName);
-  
-}
 
-  getContestName(){
+  deleteContest(contestId: any) {
+    return this.http.delete(baseUrl + 'contest/' + contestId);
+  }
+
+  editContest(contestData: any) {
+    return this.http.put(baseUrl + 'contest', contestData);
+  }
+  setContestName(contestName: string) {
+    localStorage.setItem('contestName', contestName);
+  }
+
+  getContestName() {
     return localStorage.getItem('contestName');
   }
 
-  setContestTime(contestTime:any){
-    localStorage.setItem('contestTime',contestTime);
+  setContestTime(contestTime: any) {
+    localStorage.setItem('contestTime', contestTime);
   }
-  getContestTime(){
+  getContestTime() {
     return localStorage.getItem('contestTime');
   }
 }

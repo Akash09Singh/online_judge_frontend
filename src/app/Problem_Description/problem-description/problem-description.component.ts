@@ -7,6 +7,7 @@ import { Submit } from 'src/app/models/Submit';
 import { LoginService } from 'src/app/services/login_service/login.service';
 import { SubmitProblemService } from 'src/app/services/submit_service/submit-problem.service';
 import Swal from 'sweetalert2/src/sweetalert2.js';
+import baseUrl from 'src/app/services/User_service/helper';
 
 @Component({
   selector: 'app-problem-decription',
@@ -20,21 +21,22 @@ export class ProblemDecriptionComponent implements OnInit {
 
   problemDescription!: Problem;
   submit = new Submit();
+  problemId: any;
   constructor(
     private problemByIdService: ProblemByIdService,
     private route: ActivatedRoute,
     private loginService: LoginService,
-    private submitProblemService: SubmitProblemService
+    private submitProblemService: SubmitProblemService,
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    const id: string | null = this.route.snapshot.paramMap.get('problemId');
-    this.getProblemById(id);
+    this.problemId = this.activatedRoute.snapshot.paramMap.get('problemId');
+    this.getProblemById(this.problemId);
   }
 
   getProblemById(problemId: string | null): any {
-    let url = 'http://13.232.115.69:8080/api/problems/' + problemId;
-    this.problemByIdService.fetchProblemById(url).subscribe(
+    this.problemByIdService.fetchProblemById(problemId).subscribe(
       (data) => {
         this.problemDescription = data;
         this.submit.code = this.problemDescription.boiler_code_cpp;
